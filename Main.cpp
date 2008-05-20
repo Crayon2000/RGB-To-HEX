@@ -36,10 +36,18 @@ void __fastcall TfrmMain::TrackBChange(TObject */*Sender*/)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TfrmMain::Button1Click(TObject */*Sender*/)
+void __fastcall TfrmMain::cmdClipboard24Click(TObject */*Sender*/)
 {
     TClipboard *ClipBoard  = new TClipboard();
-    ClipBoard->SetTextBuf(txtHEX->Text.c_str());
+    ClipBoard->SetTextBuf(txtHEX24->Text.c_str());
+    delete ClipBoard;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TfrmMain::cmdClipboard16Click(TObject */*Sender*/)
+{
+    TClipboard *ClipBoard  = new TClipboard();
+    ClipBoard->SetTextBuf(txtHEX16->Text.c_str());
     delete ClipBoard;
 }
 //---------------------------------------------------------------------------
@@ -52,7 +60,6 @@ void __fastcall TfrmMain::ColorBox1Change(TObject */*Sender*/)
     txtB->Text = GetBValue(ColorBox1->Selected);
 }
 //---------------------------------------------------------------------------
-
 
 void __fastcall TfrmMain::txtRChange(TObject */*Sender*/)
 {
@@ -106,10 +113,15 @@ void __fastcall TfrmMain::BrowseColor1Click(TObject */*Sender*/)
 
 void __fastcall TfrmMain::ChangeColor(TColor Color)
 {
+    int R = GetRValue(Color),
+        G = GetGValue(Color),
+        B = GetBValue(Color);
+
     RGBColor->Color = Color;
-    txtHEX->Text = IntToHex(GetRValue(Color), 2) +
-                    IntToHex(GetGValue(Color), 2) +
-                    IntToHex(GetBValue(Color), 2);
+    txtHEX24->Text = IntToHex(R, 2) +
+                     IntToHex(G, 2) +
+                     IntToHex(B, 2);
+    txtHEX16->Text = IntToHex(RGB24To16(R, G, B), 4);
 }
 //---------------------------------------------------------------------------
 
@@ -121,4 +133,9 @@ void __fastcall TfrmMain::TrackChange()
 }
 //---------------------------------------------------------------------------
 
+int __fastcall TfrmMain::RGB24To16(int R, int G, int B)
+{
+    return ( ((R >> 3) << 11) | ((G >> 2) << 5) | (B >> 3) );
+}
+//---------------------------------------------------------------------------
 

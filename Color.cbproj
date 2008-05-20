@@ -20,62 +20,57 @@
     <CfgParent>Base</CfgParent>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Base)'!=''">
-    <LinkCodeGuard>true</LinkCodeGuard>
-    <OutputExt>exe</OutputExt>
     <DCC_Optimize>false</DCC_Optimize>
+    <OutputExt>exe</OutputExt>
     <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
     <ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
-    <DynamicRTL>true</DynamicRTL>
     <BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
     <OptPCH>"vcl.h"="vcl1.h"</OptPCH>
-    <ILINK_AppType>Windows</ILINK_AppType>
     <BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
-    <BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+    <ILINK_AppType>Windows</ILINK_AppType>
     <BCC_GenerateWindowsApp>true</BCC_GenerateWindowsApp>
-    <DCC_MakeModifiedUnits>true</DCC_MakeModifiedUnits>
+    <BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
     <BCC_ZeroLengthEmptyMemberFuncs>true</BCC_ZeroLengthEmptyMemberFuncs>
+    <DCC_MakeModifiedUnits>true</DCC_MakeModifiedUnits>
     <FinalOutputDir>.</FinalOutputDir>
     <TASM_AdditionalSwitches> /w2</TASM_AdditionalSwitches>
+    <PackageImports>vcl.bpi;rtl.bpi;bcbie.bpi;vclx.bpi;vclactnband.bpi;xmlrtl.bpi;bcbsmp.bpi;dbrtl.bpi;vcldb.bpi;vcldbx.bpi;bdertl.bpi;dsnap.bpi;dsnapcon.bpi;teeUI.bpi;teedb.bpi;tee.bpi;adortl.bpi;vclib.bpi;ibxpress.bpi;dbxcds.bpi;dbexpress.bpi;DbxCommonDriver.bpi;IndyCore.bpi;IndySystem.bpi;IndyProtocols.bpi;inet.bpi;IntrawebDB_90_100.bpi;Intraweb_90_100.bpi;vclie.bpi;websnap.bpi;webdsnap.bpi;inetdbbde.bpi;inetdbxpress.bpi;soaprtl.bpi;Crayon.bpi;AdvTreePkgD2006.bpi;alvpkgd2006.bpi</PackageImports>
     <DCC_UnitSearchPath>.\;$(BDS)\lib;$(BDS)\lib\obj</DCC_UnitSearchPath>
-    <BRCC_UserSuppliedOptions> -I$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware</BRCC_UserSuppliedOptions>
-    <BCC_StackFrames>true</BCC_StackFrames>
     <BCC_GenerateMultithreaded>true</BCC_GenerateMultithreaded>
-    <PackageLibs>rtl.lib;vcl.lib</PackageLibs>
+    <BCC_StackFrames>true</BCC_StackFrames>
+    <BRCC_UserSuppliedOptions> -I$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware</BRCC_UserSuppliedOptions>
     <BCC_PCHCache>true</BCC_PCHCache>
     <BCC_IntegerSizedEnums>false</BCC_IntegerSizedEnums>
-    <DCC_IncludePath>.\;$(BDS)\lib;$(BDS)\lib\obj</DCC_IncludePath>
-    <BRCC_IncludePath>$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware</BRCC_IncludePath>
-    <AllPackageLibs>rtl.lib;vcl.lib</AllPackageLibs>
-    <TASM_IncludePath>$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware</TASM_IncludePath>
     <BCC_IncludePath>$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware</BCC_IncludePath>
-    <ILINK_LibraryPath>$(BDS)\lib\obj;$(BDS)\lib</ILINK_LibraryPath>
-    <BCC_ZeroLengthEmptyBaseClass>true</BCC_ZeroLengthEmptyBaseClass>
+    <TASM_IncludePath>$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware</TASM_IncludePath>
+    <AllPackageLibs>rtl.lib;vcl.lib</AllPackageLibs>
+    <BRCC_IncludePath>$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware</BRCC_IncludePath>
+    <DCC_IncludePath>.\;$(BDS)\lib;$(BDS)\lib\obj</DCC_IncludePath>
     <BCC_DisableOptimizations>true</BCC_DisableOptimizations>
-    <Multithreaded>true</Multithreaded>
-    <TASM_Defines>_DEBUG</TASM_Defines>
-    <BRCC_Defines>_DEBUG</BRCC_Defines>
+    <BCC_ZeroLengthEmptyBaseClass>true</BCC_ZeroLengthEmptyBaseClass>
+    <ILINK_LibraryPath>$(BDS)\lib\obj;$(BDS)\lib</ILINK_LibraryPath>
     <BCC_Defines>NO_STRICT</BCC_Defines>
+    <BRCC_Defines>_DEBUG</BRCC_Defines>
+    <TASM_Defines>_DEBUG</TASM_Defines>
+    <Multithreaded>true</Multithreaded>
     <BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
     <DCC_SymbolReferenceInfo>2</DCC_SymbolReferenceInfo>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Cfg_1)'!=''">
-    <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
     <ILINK_IntermediateOutputPath>Debug_Build</ILINK_IntermediateOutputPath>
-    <BCC_MonitorThis>true</BCC_MonitorThis>
+    <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+    <DynamicRTL>false</DynamicRTL>
     <ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
     <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
-    <BCC_MonitorGlobalAndStackData>true</BCC_MonitorGlobalAndStackData>
     <IntermediateOutputDir>Debug_Build</IntermediateOutputDir>
-    <BCC_AllCodeguardOptions>true</BCC_AllCodeguardOptions>
     <TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
     <ILINK_LibraryPath>$(BDS)\lib\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
     <BCC_Defines>_DEBUG;$(BCC_Defines)</BCC_Defines>
-    <BCC_MonitorInlinePtrAccess>true</BCC_MonitorInlinePtrAccess>
     <TASM_Debugging>Full</TASM_Debugging>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Cfg_2)'!=''">
-    <DCC_Optimize>true</DCC_Optimize>
     <BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+    <DCC_Optimize>true</DCC_Optimize>
     <ILINK_IntermediateOutputPath>Release_Build</ILINK_IntermediateOutputPath>
     <DynamicRTL>false</DynamicRTL>
     <BCC_InlineFunctionExpansion>true</BCC_InlineFunctionExpansion>
@@ -91,14 +86,45 @@
     <Borland.Personality>CPlusPlusBuilder.Personality</Borland.Personality>
     <Borland.ProjectType>CppVCLApplication</Borland.ProjectType>
     <BorlandProject>
-<BorlandProject><CPlusPlusBuilder.Personality><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">1</VersionInfo><VersionInfo Name="MinorVer">0</VersionInfo><VersionInfo Name="Release">0</VersionInfo><VersionInfo Name="Build">0</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">3084</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName">Crayon Application</VersionInfoKeys><VersionInfoKeys Name="FileDescription">RGB To HEX</VersionInfoKeys><VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys><VersionInfoKeys Name="InternalName">RGB To HEX</VersionInfoKeys><VersionInfoKeys Name="LegalCopyright">Copyright 2001-2008 Crayon Application</VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks">RGB To HEX</VersionInfoKeys><VersionInfoKeys Name="OriginalFilename">color.exe</VersionInfoKeys><VersionInfoKeys Name="ProductName">RGB To HEX</VersionInfoKeys><VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys><VersionInfoKeys Name="Comments"></VersionInfoKeys></VersionInfoKeys><Debugging><Debugging Name="DebugSourceDirs"></Debugging></Debugging><Parameters><Parameters Name="RunParams"></Parameters><Parameters Name="Launcher"></Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="DebugCWD"></Parameters><Parameters Name="HostApplication"></Parameters><Parameters Name="RemoteHost"></Parameters><Parameters Name="RemotePath"></Parameters><Parameters Name="RemoteParams"></Parameters><Parameters Name="RemoteLauncher"></Parameters><Parameters Name="UseRemoteLauncher">False</Parameters><Parameters Name="RemoteCWD"></Parameters><Parameters Name="RemoteDebug">False</Parameters><Parameters Name="Debug Symbols Search Path"></Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><Linker><Linker Name="LibPrefix"></Linker><Linker Name="LibSuffix"></Linker><Linker Name="LibVersion"></Linker></Linker><ProjectProperties><ProjectProperties Name="AutoShowDeps">False</ProjectProperties><ProjectProperties Name="ManagePaths">True</ProjectProperties><ProjectProperties Name="VerifyPackages">True</ProjectProperties></ProjectProperties><Source><Source Name="MainSource">Color.cpp</Source></Source><HistoryLists_hlFinalOutputDir><HistoryLists_hlFinalOutputDir Name="Count">1</HistoryLists_hlFinalOutputDir><HistoryLists_hlFinalOutputDir Name="Item0">.</HistoryLists_hlFinalOutputDir></HistoryLists_hlFinalOutputDir><HistoryLists_hlILINK_LibraryPath><HistoryLists_hlILINK_LibraryPath Name="Count">1</HistoryLists_hlILINK_LibraryPath><HistoryLists_hlILINK_LibraryPath Name="Item0">$(BDS)\lib\debug;$(BDS)\lib\obj;$(BDS)\lib</HistoryLists_hlILINK_LibraryPath></HistoryLists_hlILINK_LibraryPath><HistoryLists_hlIntermediateOutputDir><HistoryLists_hlIntermediateOutputDir Name="Count">1</HistoryLists_hlIntermediateOutputDir><HistoryLists_hlIntermediateOutputDir Name="Item0">Debug_Build</HistoryLists_hlIntermediateOutputDir></HistoryLists_hlIntermediateOutputDir><HistoryLists_hlILINK_MaxErrors><HistoryLists_hlILINK_MaxErrors Name="Count">1</HistoryLists_hlILINK_MaxErrors><HistoryLists_hlILINK_MaxErrors Name="Item0">0</HistoryLists_hlILINK_MaxErrors></HistoryLists_hlILINK_MaxErrors><HistoryLists_hlILINK_FileAlignment><HistoryLists_hlILINK_FileAlignment Name="Count">1</HistoryLists_hlILINK_FileAlignment><HistoryLists_hlILINK_FileAlignment Name="Item0">0x200</HistoryLists_hlILINK_FileAlignment></HistoryLists_hlILINK_FileAlignment><HistoryLists_hlILINK_ObjectAlignment><HistoryLists_hlILINK_ObjectAlignment Name="Count">1</HistoryLists_hlILINK_ObjectAlignment><HistoryLists_hlILINK_ObjectAlignment Name="Item0">4096</HistoryLists_hlILINK_ObjectAlignment></HistoryLists_hlILINK_ObjectAlignment><HistoryLists_hlILINK_BaseAddress><HistoryLists_hlILINK_BaseAddress Name="Count">1</HistoryLists_hlILINK_BaseAddress><HistoryLists_hlILINK_BaseAddress Name="Item0">0x00400000</HistoryLists_hlILINK_BaseAddress></HistoryLists_hlILINK_BaseAddress><HistoryLists_hlILINK_HeapCommitSize><HistoryLists_hlILINK_HeapCommitSize Name="Count">1</HistoryLists_hlILINK_HeapCommitSize><HistoryLists_hlILINK_HeapCommitSize Name="Item0">0x00001000</HistoryLists_hlILINK_HeapCommitSize></HistoryLists_hlILINK_HeapCommitSize><HistoryLists_hlILINK_HeapReserveSize><HistoryLists_hlILINK_HeapReserveSize Name="Count">1</HistoryLists_hlILINK_HeapReserveSize><HistoryLists_hlILINK_HeapReserveSize Name="Item0">0x00100000</HistoryLists_hlILINK_HeapReserveSize></HistoryLists_hlILINK_HeapReserveSize><HistoryLists_hlILINK_StackCommitSize><HistoryLists_hlILINK_StackCommitSize Name="Count">1</HistoryLists_hlILINK_StackCommitSize><HistoryLists_hlILINK_StackCommitSize Name="Item0">0x00002000</HistoryLists_hlILINK_StackCommitSize></HistoryLists_hlILINK_StackCommitSize><HistoryLists_hlILINK_StackReserveSize><HistoryLists_hlILINK_StackReserveSize Name="Count">1</HistoryLists_hlILINK_StackReserveSize><HistoryLists_hlILINK_StackReserveSize Name="Item0">0x00100000</HistoryLists_hlILINK_StackReserveSize></HistoryLists_hlILINK_StackReserveSize><HistoryLists_hlILINK_IntermediateOutputPath><HistoryLists_hlILINK_IntermediateOutputPath Name="Count">1</HistoryLists_hlILINK_IntermediateOutputPath><HistoryLists_hlILINK_IntermediateOutputPath Name="Item0">Release_Build</HistoryLists_hlILINK_IntermediateOutputPath></HistoryLists_hlILINK_IntermediateOutputPath>  <HistoryLists_hlBCC_IncludePath>
-      <HistoryLists_hlBCC_IncludePath Name="Count">1</HistoryLists_hlBCC_IncludePath>
-      <HistoryLists_hlBCC_IncludePath Name="Item0">$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware</HistoryLists_hlBCC_IncludePath>
-    </HistoryLists_hlBCC_IncludePath>
-    <HistoryLists_hlBCC_Defines>
-      <HistoryLists_hlBCC_Defines Name="Count">1</HistoryLists_hlBCC_Defines>
-      <HistoryLists_hlBCC_Defines Name="Item0">_DEBUG;NO_STRICT</HistoryLists_hlBCC_Defines>
-    </HistoryLists_hlBCC_Defines>
+<BorlandProject><CPlusPlusBuilder.Personality><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">1</VersionInfo><VersionInfo Name="MinorVer">1</VersionInfo><VersionInfo Name="Release">0</VersionInfo><VersionInfo Name="Build">0</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">3084</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName">Crayon Application</VersionInfoKeys><VersionInfoKeys Name="FileDescription">RGB To HEX</VersionInfoKeys><VersionInfoKeys Name="FileVersion">1.1.0.0</VersionInfoKeys><VersionInfoKeys Name="InternalName">RGB To HEX</VersionInfoKeys><VersionInfoKeys Name="LegalCopyright">Copyright 2001-2008 Crayon Application</VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks">RGB To HEX</VersionInfoKeys><VersionInfoKeys Name="OriginalFilename">color.exe</VersionInfoKeys><VersionInfoKeys Name="ProductName">RGB To HEX</VersionInfoKeys><VersionInfoKeys Name="ProductVersion">1.1.0.0</VersionInfoKeys><VersionInfoKeys Name="Comments"></VersionInfoKeys></VersionInfoKeys><Debugging><Debugging Name="DebugSourceDirs"></Debugging></Debugging><Parameters><Parameters Name="RunParams"></Parameters><Parameters Name="Launcher"></Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="DebugCWD"></Parameters><Parameters Name="HostApplication"></Parameters><Parameters Name="RemoteHost"></Parameters><Parameters Name="RemotePath"></Parameters><Parameters Name="RemoteParams"></Parameters><Parameters Name="RemoteLauncher"></Parameters><Parameters Name="UseRemoteLauncher">False</Parameters><Parameters Name="RemoteCWD"></Parameters><Parameters Name="RemoteDebug">False</Parameters><Parameters Name="Debug Symbols Search Path"></Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><Linker><Linker Name="LibPrefix"></Linker><Linker Name="LibSuffix"></Linker><Linker Name="LibVersion"></Linker></Linker><ProjectProperties><ProjectProperties Name="AutoShowDeps">False</ProjectProperties><ProjectProperties Name="ManagePaths">True</ProjectProperties><ProjectProperties Name="VerifyPackages">True</ProjectProperties></ProjectProperties><Source><Source Name="MainSource">Color.cpp</Source></Source><HistoryLists_hlFinalOutputDir><HistoryLists_hlFinalOutputDir Name="Count">1</HistoryLists_hlFinalOutputDir><HistoryLists_hlFinalOutputDir Name="Item0">.</HistoryLists_hlFinalOutputDir></HistoryLists_hlFinalOutputDir><HistoryLists_hlILINK_LibraryPath><HistoryLists_hlILINK_LibraryPath Name="Count">1</HistoryLists_hlILINK_LibraryPath><HistoryLists_hlILINK_LibraryPath Name="Item0">$(BDS)\lib\debug;$(BDS)\lib\obj;$(BDS)\lib</HistoryLists_hlILINK_LibraryPath></HistoryLists_hlILINK_LibraryPath><HistoryLists_hlIntermediateOutputDir><HistoryLists_hlIntermediateOutputDir Name="Count">1</HistoryLists_hlIntermediateOutputDir><HistoryLists_hlIntermediateOutputDir Name="Item0">Debug_Build</HistoryLists_hlIntermediateOutputDir></HistoryLists_hlIntermediateOutputDir><HistoryLists_hlILINK_MaxErrors><HistoryLists_hlILINK_MaxErrors Name="Count">1</HistoryLists_hlILINK_MaxErrors><HistoryLists_hlILINK_MaxErrors Name="Item0">0</HistoryLists_hlILINK_MaxErrors></HistoryLists_hlILINK_MaxErrors><HistoryLists_hlILINK_FileAlignment><HistoryLists_hlILINK_FileAlignment Name="Count">1</HistoryLists_hlILINK_FileAlignment><HistoryLists_hlILINK_FileAlignment Name="Item0">0x200</HistoryLists_hlILINK_FileAlignment></HistoryLists_hlILINK_FileAlignment><HistoryLists_hlILINK_ObjectAlignment><HistoryLists_hlILINK_ObjectAlignment Name="Count">1</HistoryLists_hlILINK_ObjectAlignment><HistoryLists_hlILINK_ObjectAlignment Name="Item0">4096</HistoryLists_hlILINK_ObjectAlignment></HistoryLists_hlILINK_ObjectAlignment><HistoryLists_hlILINK_BaseAddress><HistoryLists_hlILINK_BaseAddress Name="Count">1</HistoryLists_hlILINK_BaseAddress><HistoryLists_hlILINK_BaseAddress Name="Item0">0x00400000</HistoryLists_hlILINK_BaseAddress></HistoryLists_hlILINK_BaseAddress><HistoryLists_hlILINK_HeapCommitSize><HistoryLists_hlILINK_HeapCommitSize Name="Count">1</HistoryLists_hlILINK_HeapCommitSize><HistoryLists_hlILINK_HeapCommitSize Name="Item0">0x00001000</HistoryLists_hlILINK_HeapCommitSize></HistoryLists_hlILINK_HeapCommitSize><HistoryLists_hlILINK_HeapReserveSize><HistoryLists_hlILINK_HeapReserveSize Name="Count">1</HistoryLists_hlILINK_HeapReserveSize><HistoryLists_hlILINK_HeapReserveSize Name="Item0">0x00100000</HistoryLists_hlILINK_HeapReserveSize></HistoryLists_hlILINK_HeapReserveSize><HistoryLists_hlILINK_StackCommitSize><HistoryLists_hlILINK_StackCommitSize Name="Count">1</HistoryLists_hlILINK_StackCommitSize><HistoryLists_hlILINK_StackCommitSize Name="Item0">0x00002000</HistoryLists_hlILINK_StackCommitSize></HistoryLists_hlILINK_StackCommitSize><HistoryLists_hlILINK_StackReserveSize><HistoryLists_hlILINK_StackReserveSize Name="Count">1</HistoryLists_hlILINK_StackReserveSize><HistoryLists_hlILINK_StackReserveSize Name="Item0">0x00100000</HistoryLists_hlILINK_StackReserveSize></HistoryLists_hlILINK_StackReserveSize><HistoryLists_hlILINK_IntermediateOutputPath><HistoryLists_hlILINK_IntermediateOutputPath Name="Count">1</HistoryLists_hlILINK_IntermediateOutputPath><HistoryLists_hlILINK_IntermediateOutputPath Name="Item0">Release_Build</HistoryLists_hlILINK_IntermediateOutputPath></HistoryLists_hlILINK_IntermediateOutputPath><HistoryLists_hlBCC_IncludePath><HistoryLists_hlBCC_IncludePath Name="Count">1</HistoryLists_hlBCC_IncludePath><HistoryLists_hlBCC_IncludePath Name="Item0">$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware</HistoryLists_hlBCC_IncludePath></HistoryLists_hlBCC_IncludePath><HistoryLists_hlBCC_Defines><HistoryLists_hlBCC_Defines Name="Count">1</HistoryLists_hlBCC_Defines><HistoryLists_hlBCC_Defines Name="Item0">_DEBUG;NO_STRICT</HistoryLists_hlBCC_Defines></HistoryLists_hlBCC_Defines><Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\bcboffice2k100.bpl">CodeGear C++Builder Office 2000 Servers Package</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\bcbofficexp100.bpl">CodeGear C++Builder Office XP Servers Package</Excluded_Packages>
+    </Excluded_Packages>  <HistoryLists_hlTASM_HashTableCapacity>
+      <HistoryLists_hlTASM_HashTableCapacity Name="Count">1</HistoryLists_hlTASM_HashTableCapacity>
+      <HistoryLists_hlTASM_HashTableCapacity Name="Item0">8192</HistoryLists_hlTASM_HashTableCapacity>
+    </HistoryLists_hlTASM_HashTableCapacity>
+    <HistoryLists_hlTASM_MaxSymbolLength>
+      <HistoryLists_hlTASM_MaxSymbolLength Name="Count">1</HistoryLists_hlTASM_MaxSymbolLength>
+      <HistoryLists_hlTASM_MaxSymbolLength Name="Item0">12</HistoryLists_hlTASM_MaxSymbolLength>
+    </HistoryLists_hlTASM_MaxSymbolLength>
+    <HistoryLists_hlTASM_Passes>
+      <HistoryLists_hlTASM_Passes Name="Count">1</HistoryLists_hlTASM_Passes>
+      <HistoryLists_hlTASM_Passes Name="Item0">1</HistoryLists_hlTASM_Passes>
+    </HistoryLists_hlTASM_Passes>
+    <HistoryLists_hlTASM_VersionId>
+      <HistoryLists_hlTASM_VersionId Name="Count">1</HistoryLists_hlTASM_VersionId>
+      <HistoryLists_hlTASM_VersionId Name="Item0">0</HistoryLists_hlTASM_VersionId>
+    </HistoryLists_hlTASM_VersionId>
+    <HistoryLists_hlTASM_IncludePath>
+      <HistoryLists_hlTASM_IncludePath Name="Count">1</HistoryLists_hlTASM_IncludePath>
+      <HistoryLists_hlTASM_IncludePath Name="Item0">$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware</HistoryLists_hlTASM_IncludePath>
+    </HistoryLists_hlTASM_IncludePath>
+    <HistoryLists_hlTASM_Defines>
+      <HistoryLists_hlTASM_Defines Name="Count">1</HistoryLists_hlTASM_Defines>
+      <HistoryLists_hlTASM_Defines Name="Item0">_DEBUG</HistoryLists_hlTASM_Defines>
+    </HistoryLists_hlTASM_Defines>
+    <HistoryLists_hlBRCC_IncludePath>
+      <HistoryLists_hlBRCC_IncludePath Name="Count">1</HistoryLists_hlBRCC_IncludePath>
+      <HistoryLists_hlBRCC_IncludePath Name="Item0">$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware</HistoryLists_hlBRCC_IncludePath>
+    </HistoryLists_hlBRCC_IncludePath>
+    <HistoryLists_hlBRCC_Defines>
+      <HistoryLists_hlBRCC_Defines Name="Count">1</HistoryLists_hlBRCC_Defines>
+      <HistoryLists_hlBRCC_Defines Name="Item0">_DEBUG</HistoryLists_hlBRCC_Defines>
+    </HistoryLists_hlBRCC_Defines>
+    <HistoryLists_hlBCC_MaxIdentifierLength>
+      <HistoryLists_hlBCC_MaxIdentifierLength Name="Count">1</HistoryLists_hlBCC_MaxIdentifierLength>
+      <HistoryLists_hlBCC_MaxIdentifierLength Name="Item0">250</HistoryLists_hlBCC_MaxIdentifierLength>
+    </HistoryLists_hlBCC_MaxIdentifierLength>
   </CPlusPlusBuilder.Personality></BorlandProject></BorlandProject>
   </ProjectExtensions>
   <Import Project="$(MSBuildBinPath)\Borland.Cpp.Targets" />

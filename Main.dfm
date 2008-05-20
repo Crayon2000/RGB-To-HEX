@@ -4,7 +4,7 @@ object frmMain: TfrmMain
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'RGB To HEX'
-  ClientHeight = 225
+  ClientHeight = 289
   ClientWidth = 422
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -102,6 +102,20 @@ object frmMain: TfrmMain
     Font.Style = [fsBold]
     ParentFont = False
   end
+  object lblHighcolor: TLabel
+    Left = 184
+    Top = 230
+    Width = 75
+    Height = 13
+    Caption = '16-bit highcolor:'
+  end
+  object lblTruecolor: TLabel
+    Left = 186
+    Top = 172
+    Width = 73
+    Height = 13
+    Caption = '24-bit truecolor:'
+  end
   object txtR: TEdit
     Left = 32
     Top = 48
@@ -189,20 +203,21 @@ object frmMain: TfrmMain
     TabOrder = 5
     OnChange = TrackBChange
   end
-  object Button1: TButton
-    Left = 312
-    Top = 176
+  object cmdClipboard24: TButton
+    Left = 317
+    Top = 191
     Width = 97
-    Height = 41
+    Height = 33
     Caption = 'Copy to Clipboard'
-    TabOrder = 6
-    OnClick = Button1Click
+    TabOrder = 8
+    OnClick = cmdClipboard24Click
   end
-  object txtHEX: TEdit
+  object txtHEX24: TEdit
     Left = 184
-    Top = 176
+    Top = 191
     Width = 113
-    Height = 41
+    Height = 33
+    AutoSize = False
     CharCase = ecUpperCase
     Color = clBtnFace
     Font.Charset = ANSI_CHARSET
@@ -228,19 +243,46 @@ object frmMain: TfrmMain
     Font.Style = []
     ItemHeight = 16
     ParentFont = False
-    TabOrder = 8
+    TabOrder = 6
     OnChange = ColorBox1Change
   end
   object RGBColor: TPanel
     Left = 8
-    Top = 144
+    Top = 143
     Width = 161
-    Height = 73
+    Height = 138
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clBlack
     PopupMenu = PopupMenu1
+    TabOrder = 11
+  end
+  object txtHEX16: TEdit
+    Left = 184
+    Top = 249
+    Width = 113
+    Height = 32
+    AutoSize = False
+    CharCase = ecUpperCase
+    Color = clBtnFace
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -29
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ReadOnly = True
     TabOrder = 9
+    Text = '0000'
+  end
+  object cmdClipboard16: TButton
+    Left = 317
+    Top = 248
+    Width = 97
+    Height = 33
+    Caption = 'Copy to Clipboard'
+    TabOrder = 10
+    OnClick = cmdClipboard16Click
   end
   object ColorDialog1: TColorDialog
     Options = [cdFullOpen]
@@ -253,13 +295,6 @@ object frmMain: TfrmMain
     object BrowseColor1: TMenuItem
       Caption = 'Browse Color...'
       OnClick = BrowseColor1Click
-    end
-    object N1: TMenuItem
-      Caption = '-'
-    end
-    object CopytoClipboard1: TMenuItem
-      Caption = 'Copy to Clipboard'
-      OnClick = Button1Click
     end
   end
   object ActionList1: TActionList
