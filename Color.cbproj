@@ -60,17 +60,17 @@
 			<TASM_Debugging>None</TASM_Debugging>
 		</PropertyGroup>
 		<ItemGroup>
-			<ResFiles Include="Color.res">
-				<BuildOrder>1</BuildOrder>
-			</ResFiles>
+			<CppCompile Include="Color.cpp">
+				<BuildOrder>0</BuildOrder>
+			</CppCompile>
 			<CppCompile Include="Main.cpp">
 				<Form>frmMain</Form>
 				<DependentOn>Main.h</DependentOn>
 				<BuildOrder>2</BuildOrder>
 			</CppCompile>
-			<CppCompile Include="Color.cpp">
-				<BuildOrder>0</BuildOrder>
-			</CppCompile>
+			<ResFiles Include="Color.res">
+				<BuildOrder>1</BuildOrder>
+			</ResFiles>
 			<FormResources Include="Main.dfm"/>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
@@ -110,7 +110,7 @@
 						<VersionInfoKeys Name="FileDescription">RGB To HEX</VersionInfoKeys>
 						<VersionInfoKeys Name="FileVersion">1.1.0.0</VersionInfoKeys>
 						<VersionInfoKeys Name="InternalName">RGB To HEX</VersionInfoKeys>
-						<VersionInfoKeys Name="LegalCopyright">Copyright 2001-2008 Crayon Application</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright">Copyright 2001-2009 Crayon Application</VersionInfoKeys>
 						<VersionInfoKeys Name="LegalTrademarks">RGB To HEX</VersionInfoKeys>
 						<VersionInfoKeys Name="OriginalFilename">color.exe</VersionInfoKeys>
 						<VersionInfoKeys Name="ProductName">RGB To HEX</VersionInfoKeys>
@@ -246,9 +246,6 @@
 						<HistoryLists_hlBCC_MaxIdentifierLength Name="Count">1</HistoryLists_hlBCC_MaxIdentifierLength>
 						<HistoryLists_hlBCC_MaxIdentifierLength Name="Item0">250</HistoryLists_hlBCC_MaxIdentifierLength>
 					</HistoryLists_hlBCC_MaxIdentifierLength>
-					<Language>
-						<Language Name="RootDir">D:\Borland C++ Builder\RGB To HEX\</Language>
-					</Language>
 				</CPlusPlusBuilder.Personality>
 			</BorlandProject>
 			<ProjectFileVersion>12</ProjectFileVersion>
