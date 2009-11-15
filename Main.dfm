@@ -241,7 +241,6 @@ object frmMain: TfrmMain
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ItemHeight = 16
     ParentFont = False
     TabOrder = 6
     OnChange = ColorBox1Change
@@ -254,6 +253,7 @@ object frmMain: TfrmMain
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clBlack
+    ParentBackground = False
     PopupMenu = PopupMenu1
     TabOrder = 11
   end

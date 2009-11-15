@@ -2,10 +2,11 @@
 
 #include <vcl.h>
 #pragma hdrstop
+#include <tchar.h>
 USERES("Color.res");
 USEFORM("Main.cpp", frmMain);
 //---------------------------------------------------------------------------
-WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
+WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 {
     try
     {

@@ -114,7 +114,7 @@
 						<VersionInfoKeys Name="LegalTrademarks">RGB To HEX</VersionInfoKeys>
 						<VersionInfoKeys Name="OriginalFilename">color.exe</VersionInfoKeys>
 						<VersionInfoKeys Name="ProductName">RGB To HEX</VersionInfoKeys>
-						<VersionInfoKeys Name="ProductVersion">1.1.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.1</VersionInfoKeys>
 						<VersionInfoKeys Name="Comments"/>
 					</VersionInfoKeys>
 					<Debugging>
