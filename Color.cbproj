@@ -34,16 +34,23 @@
 			<ILINK_LibraryPath>$(BDS)\lib;$(BDS)\lib\obj;$(BDS)\lib\psdk</ILINK_LibraryPath>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_1)'!=''">
-			<ILINK_IntermediateOutputPath>Debug_Build</ILINK_IntermediateOutputPath>
-			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
-			<DynamicRTL>false</DynamicRTL>
-			<ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
-			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
-			<IntermediateOutputDir>Debug_Build</IntermediateOutputDir>
-			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<DCC_Define>DEBUG</DCC_Define>
+			<Defines>_DEBUG;$(Defines)</Defines>
+			<BCC_StackFrames>true</BCC_StackFrames>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+			<DCC_Optimize>false</DCC_Optimize>
+			<IntermediateOutputDir>Debug</IntermediateOutputDir>
 			<ILINK_LibraryPath>$(BDS)\lib\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
-			<BCC_Defines>_DEBUG;$(BCC_Defines)</BCC_Defines>
+			<ILINK_TranslatedLibraryPath>$(BDS)\lib\$(LANGDIR)\debug;$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
 			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_2)'!=''">
 			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
@@ -60,17 +67,17 @@
 			<TASM_Debugging>None</TASM_Debugging>
 		</PropertyGroup>
 		<ItemGroup>
-			<CppCompile Include="Color.cpp">
-				<BuildOrder>0</BuildOrder>
-			</CppCompile>
+			<ResFiles Include="Color.res">
+				<BuildOrder>1</BuildOrder>
+			</ResFiles>
 			<CppCompile Include="Main.cpp">
 				<Form>frmMain</Form>
 				<DependentOn>Main.h</DependentOn>
 				<BuildOrder>2</BuildOrder>
 			</CppCompile>
-			<ResFiles Include="Color.res">
-				<BuildOrder>1</BuildOrder>
-			</ResFiles>
+			<CppCompile Include="Color.cpp">
+				<BuildOrder>0</BuildOrder>
+			</CppCompile>
 			<FormResources Include="Main.dfm"/>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
