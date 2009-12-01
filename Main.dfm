@@ -48,6 +48,9 @@ object frmMain: TfrmMain
     0000000000000000000000000000000000000000000000000000000000000000
     000000000000004000008C400000DE400000FFE10000}
   OldCreateOrder = False
+  OnCreate = FormCreate
+  OnMouseMove = FormMouseMove
+  OnMouseUp = FormMouseUp
   PixelsPerInch = 96
   TextHeight = 13
   object lblR: TLabel
@@ -127,6 +130,7 @@ object frmMain: TfrmMain
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     MaxLength = 3
+    NumbersOnly = True
     ParentFont = False
     PopupMenu = PopupMenu2
     TabOrder = 0
@@ -144,6 +148,7 @@ object frmMain: TfrmMain
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     MaxLength = 3
+    NumbersOnly = True
     ParentFont = False
     PopupMenu = PopupMenu2
     TabOrder = 1
@@ -161,6 +166,7 @@ object frmMain: TfrmMain
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     MaxLength = 3
+    NumbersOnly = True
     ParentFont = False
     PopupMenu = PopupMenu2
     TabOrder = 2
@@ -233,7 +239,7 @@ object frmMain: TfrmMain
   object ColorBox1: TColorBox
     Left = 184
     Top = 144
-    Width = 225
+    Width = 113
     Height = 22
     Style = [cbStandardColors, cbIncludeNone, cbIncludeDefault, cbPrettyNames]
     Font.Charset = DEFAULT_CHARSET
@@ -283,6 +289,15 @@ object frmMain: TfrmMain
     Caption = 'Copy to Clipboard'
     TabOrder = 10
     OnClick = cmdClipboard16Click
+  end
+  object cmdColorPicker: TButton
+    Left = 317
+    Top = 143
+    Width = 97
+    Height = 25
+    Caption = 'Pick Color'
+    TabOrder = 12
+    OnMouseDown = cmdColorPickerMouseDown
   end
   object ColorDialog1: TColorDialog
     Options = [cdFullOpen]

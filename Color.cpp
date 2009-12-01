@@ -3,7 +3,6 @@
 #include <vcl.h>
 #pragma hdrstop
 #include <tchar.h>
-USERES("Color.res");
 USEFORM("Main.cpp", frmMain);
 //---------------------------------------------------------------------------
 WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)

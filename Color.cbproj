@@ -70,13 +70,18 @@
 			<ResFiles Include="Color.res">
 				<BuildOrder>1</BuildOrder>
 			</ResFiles>
+			<RcItem Include="eyedropper.cur">
+				<VirtualFolder>{76A8BF51-57EE-4E8A-9080-6C3A194DB034}</VirtualFolder>
+				<ResourceType>Cursor</ResourceType>
+				<ResourceId>EYEDROPPER</ResourceId>
+			</RcItem>
+			<CppCompile Include="Color.cpp">
+				<BuildOrder>0</BuildOrder>
+			</CppCompile>
 			<CppCompile Include="Main.cpp">
 				<Form>frmMain</Form>
 				<DependentOn>Main.h</DependentOn>
 				<BuildOrder>2</BuildOrder>
-			</CppCompile>
-			<CppCompile Include="Color.cpp">
-				<BuildOrder>0</BuildOrder>
 			</CppCompile>
 			<FormResources Include="Main.dfm"/>
 			<BuildConfiguration Include="Base">
@@ -101,7 +106,7 @@
 						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
 						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
 						<VersionInfo Name="MajorVer">1</VersionInfo>
-						<VersionInfo Name="MinorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">2</VersionInfo>
 						<VersionInfo Name="Release">0</VersionInfo>
 						<VersionInfo Name="Build">0</VersionInfo>
 						<VersionInfo Name="Debug">False</VersionInfo>
@@ -115,13 +120,13 @@
 					<VersionInfoKeys>
 						<VersionInfoKeys Name="CompanyName">Crayon Application</VersionInfoKeys>
 						<VersionInfoKeys Name="FileDescription">RGB To HEX</VersionInfoKeys>
-						<VersionInfoKeys Name="FileVersion">1.1.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">1.2.0.0</VersionInfoKeys>
 						<VersionInfoKeys Name="InternalName">RGB To HEX</VersionInfoKeys>
 						<VersionInfoKeys Name="LegalCopyright">Copyright 2001-2009 Crayon Application</VersionInfoKeys>
 						<VersionInfoKeys Name="LegalTrademarks">RGB To HEX</VersionInfoKeys>
 						<VersionInfoKeys Name="OriginalFilename">color.exe</VersionInfoKeys>
 						<VersionInfoKeys Name="ProductName">RGB To HEX</VersionInfoKeys>
-						<VersionInfoKeys Name="ProductVersion">1.1</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.2</VersionInfoKeys>
 						<VersionInfoKeys Name="Comments"/>
 					</VersionInfoKeys>
 					<Debugging>
@@ -214,8 +219,10 @@
 						<HistoryLists_hlBCC_Defines Name="Item0">_DEBUG;NO_STRICT</HistoryLists_hlBCC_Defines>
 					</HistoryLists_hlBCC_Defines>
 					<Excluded_Packages>
-						<Excluded_Packages Name="$(BDS)\bin\bcboffice2k120.bpl">CodeGear C++Builder Office 2000 Servers Package</Excluded_Packages>
-						<Excluded_Packages Name="$(BDS)\bin\bcbofficexp120.bpl">CodeGear C++Builder Office XP Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\bcboffice2k140.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\bcbofficexp140.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k140.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclofficexp140.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
 					</Excluded_Packages>
 					<HistoryLists_hlTASM_HashTableCapacity>
 						<HistoryLists_hlTASM_HashTableCapacity Name="Count">1</HistoryLists_hlTASM_HashTableCapacity>
@@ -253,6 +260,9 @@
 						<HistoryLists_hlBCC_MaxIdentifierLength Name="Count">1</HistoryLists_hlBCC_MaxIdentifierLength>
 						<HistoryLists_hlBCC_MaxIdentifierLength Name="Item0">250</HistoryLists_hlBCC_MaxIdentifierLength>
 					</HistoryLists_hlBCC_MaxIdentifierLength>
+					<VFOLDERS>
+						<VFOLDER ID="{76A8BF51-57EE-4E8A-9080-6C3A194DB034}" name="Resources"/>
+					</VFOLDERS>
 				</CPlusPlusBuilder.Personality>
 			</BorlandProject>
 			<ProjectFileVersion>12</ProjectFileVersion>

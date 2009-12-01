@@ -8,6 +8,9 @@
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 TfrmMain *frmMain;
+
+static const TCursor crEyeDropper = 1;
+
 //---------------------------------------------------------------------------
 __fastcall TfrmMain::TfrmMain(TComponent* Owner)
         : TForm(Owner)
@@ -136,6 +139,57 @@ void __fastcall TfrmMain::TrackChange()
 int __fastcall TfrmMain::RGB24To16(int R, int G, int B)
 {
     return ( ((R >> 3) << 11) | ((G >> 2) << 5) | (B >> 3) );
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TfrmMain::cmdColorPickerMouseDown(TObject *Sender, TMouseButton Button,
+          TShiftState Shift, int X, int Y)
+{
+    Screen->Cursor = crEyeDropper;
+    cmdColorPicker->Enabled = false;
+    MouseCapture = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TfrmMain::FormMouseUp(TObject *Sender, TMouseButton Button, TShiftState Shift,
+          int X, int Y)
+{
+    Screen->Cursor = crDefault;
+    cmdColorPicker->Enabled = true;
+    MouseCapture = False;
+
+    SetForegroundWindow(Handle);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TfrmMain::FormMouseMove(TObject *Sender, TShiftState Shift, int X,
+          int Y)
+{
+    if(!cmdColorPicker->Enabled)
+    {
+        HDC MonitorHDC;
+        if((MonitorHDC = GetDC(NULL)) != NULL)
+        {
+            POINT MousePos;
+            COLORREF color;
+            if(GetCursorPos(&MousePos) &&
+               (color = GetPixel(MonitorHDC, MousePos.x, MousePos.y)) != CLR_INVALID)
+            {
+                ChangeColor((TColor)color);
+                txtR->Text = GetRValue(color);
+                txtG->Text = GetGValue(color);
+                txtB->Text = GetBValue(color);
+            }
+            ReleaseDC(NULL, MonitorHDC);
+        }
+    }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TfrmMain::FormCreate(TObject */*Sender*/)
+{
+    Screen->Cursors[crEyeDropper] = LoadCursor(HInstance, "EYEDROPPER");
 }
 //---------------------------------------------------------------------------
 
