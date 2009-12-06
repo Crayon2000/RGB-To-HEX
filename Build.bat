@@ -8,8 +8,8 @@ msbuild Color.cbproj /t:Build /p:"Config=Release Build" /nologo /v:q
 if errorlevel 1 goto error
 
 echo Compressing executable...
-rem upx --best --force -qq .\Release_Build\color.exe
-BCBStriper .\Release_Build\color.exe
+rem upx --best --force -qq .\Release\color.exe
+BCBStriper .\Release\color.exe
 if errorlevel 1 goto error
 
 echo Build successful.

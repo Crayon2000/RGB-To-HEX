@@ -53,28 +53,26 @@
 			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_2)'!=''">
-			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
-			<DCC_Optimize>true</DCC_Optimize>
-			<ILINK_IntermediateOutputPath>Release_Build</ILINK_IntermediateOutputPath>
-			<DynamicRTL>false</DynamicRTL>
-			<BCC_InlineFunctionExpansion>true</BCC_InlineFunctionExpansion>
-			<BCC_UseRegisterVariables>Always</BCC_UseRegisterVariables>
-			<DCC_DebugInformation>false</DCC_DebugInformation>
-			<IntermediateOutputDir>Release_Build</IntermediateOutputDir>
-			<BCC_StackFrames>false</BCC_StackFrames>
+			<Defines>NDEBUG;$(Defines)</Defines>
+			<IntermediateOutputDir>Release</IntermediateOutputDir>
 			<ILINK_LibraryPath>$(BDS)\lib\release;$(ILINK_LibraryPath)</ILINK_LibraryPath>
-			<BCC_Defines>NDEBUG;$(BCC_Defines)</BCC_Defines>
 			<TASM_Debugging>None</TASM_Debugging>
+			<ILINK_TranslatedLibraryPath>$(BDS)\lib\$(LANGDIR)\release;$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
 		</PropertyGroup>
 		<ItemGroup>
-			<ResFiles Include="Color.res">
-				<BuildOrder>1</BuildOrder>
-			</ResFiles>
 			<RcItem Include="eyedropper.cur">
 				<VirtualFolder>{76A8BF51-57EE-4E8A-9080-6C3A194DB034}</VirtualFolder>
 				<ResourceType>Cursor</ResourceType>
 				<ResourceId>EYEDROPPER</ResourceId>
 			</RcItem>
+			<CppCompile Include="About.cpp">
+				<Form>AboutBox</Form>
+				<DependentOn>About.h</DependentOn>
+				<BuildOrder>4</BuildOrder>
+			</CppCompile>
+			<ResFiles Include="Color.res">
+				<BuildOrder>1</BuildOrder>
+			</ResFiles>
 			<CppCompile Include="Color.cpp">
 				<BuildOrder>0</BuildOrder>
 			</CppCompile>
@@ -83,6 +81,7 @@
 				<DependentOn>Main.h</DependentOn>
 				<BuildOrder>2</BuildOrder>
 			</CppCompile>
+			<FormResources Include="About.dfm"/>
 			<FormResources Include="Main.dfm"/>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>

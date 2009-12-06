@@ -4,6 +4,7 @@
 #pragma hdrstop
 
 #include "Main.h"
+#include "About.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -15,6 +16,9 @@ static const TCursor crEyeDropper = 1;
 __fastcall TfrmMain::TfrmMain(TComponent* Owner)
         : TForm(Owner)
 {
+    const HMENU MySysMenu = GetSystemMenu(Handle, false);
+    AppendMenu(MySysMenu, MF_SEPARATOR, 0, 0);
+    AppendMenu(MySysMenu, MF_STRING | MF_ENABLED, 101, "About...");
 }
 //---------------------------------------------------------------------------
 
@@ -193,3 +197,12 @@ void __fastcall TfrmMain::FormCreate(TObject */*Sender*/)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TfrmMain::MenuHandler(TMessage &Msg)
+{
+    if(Msg.WParam == 101)
+    {
+        AboutBox->ShowModal();
+    }
+    TForm::Dispatch(&Msg);
+}
+//---------------------------------------------------------------------------

@@ -68,6 +68,11 @@ public:		// User declarations
     __fastcall TfrmMain(TComponent* Owner);
     void __fastcall ChangeColor(TColor);
     void __fastcall TrackChange();
+    void __fastcall MenuHandler(TMessage &Msg);
+
+    BEGIN_MESSAGE_MAP
+        MESSAGE_HANDLER(WM_SYSCOMMAND, TMessage, MenuHandler)
+    END_MESSAGE_MAP(TForm)
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TfrmMain *frmMain;
