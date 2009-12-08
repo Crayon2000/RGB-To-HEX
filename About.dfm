@@ -6,11 +6,7 @@ object AboutBox: TAboutBox
   ClientHeight = 156
   ClientWidth = 298
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'MS Sans Serif'
-  Font.Style = []
+  ParentFont = True
   OldCreateOrder = True
   Position = poMainFormCenter
   OnCreate = FormCreate
@@ -35,13 +31,13 @@ object AboutBox: TAboutBox
     object ProductName: TLabel
       Left = 88
       Top = 16
-      Width = 75
+      Width = 64
       Height = 13
       Caption = 'RGB To HEX'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
       IsControl = True
@@ -49,15 +45,15 @@ object AboutBox: TAboutBox
     object Version: TLabel
       Left = 88
       Top = 40
-      Width = 53
+      Width = 54
       Height = 13
-      Caption = 'Version 1.2'
+      Caption = 'Version 1.3'
       IsControl = True
     end
     object Copyright: TLabel
       Left = 8
       Top = 80
-      Width = 189
+      Width = 195
       Height = 13
       Caption = 'Copyright 2001-2009 Crayon Application'
       IsControl = True

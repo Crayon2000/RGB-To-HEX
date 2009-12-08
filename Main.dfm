@@ -5,13 +5,9 @@ object frmMain: TfrmMain
   BorderStyle = bsSingle
   Caption = 'RGB To HEX'
   ClientHeight = 289
-  ClientWidth = 422
+  ClientWidth = 433
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'MS Sans Serif'
-  Font.Style = []
+  ParentFont = True
   Icon.Data = {
     0000010002002020100000000000E80200002600000010101000000000002801
     00000E0300002800000020000000400000000100040000000000800200000000
@@ -56,66 +52,66 @@ object frmMain: TfrmMain
   object lblR: TLabel
     Left = 8
     Top = 48
-    Width = 15
-    Height = 24
+    Width = 14
+    Height = 23
     Caption = 'R'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object lblG: TLabel
     Left = 8
     Top = 80
-    Width = 16
-    Height = 24
+    Width = 14
+    Height = 23
     Caption = 'G'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object lblB: TLabel
     Left = 8
     Top = 112
-    Width = 14
-    Height = 24
+    Width = 13
+    Height = 23
     Caption = 'B'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object lblTitre: TLabel
     Left = 109
     Top = 0
-    Width = 200
-    Height = 37
+    Width = 193
+    Height = 39
     Caption = 'RGB To HEX'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -32
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object lblHighcolor: TLabel
     Left = 184
     Top = 230
-    Width = 75
+    Width = 78
     Height = 13
     Caption = '16-bit highcolor:'
   end
   object lblTruecolor: TLabel
     Left = 186
     Top = 172
-    Width = 73
+    Width = 78
     Height = 13
     Caption = '24-bit truecolor:'
   end
@@ -123,15 +119,9 @@ object frmMain: TfrmMain
     Left = 32
     Top = 48
     Width = 49
-    Height = 24
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    Height = 21
     MaxLength = 3
     NumbersOnly = True
-    ParentFont = False
     PopupMenu = PopupMenu2
     TabOrder = 0
     Text = '0'
@@ -141,15 +131,9 @@ object frmMain: TfrmMain
     Left = 32
     Top = 80
     Width = 49
-    Height = 24
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    Height = 21
     MaxLength = 3
     NumbersOnly = True
-    ParentFont = False
     PopupMenu = PopupMenu2
     TabOrder = 1
     Text = '0'
@@ -159,15 +143,9 @@ object frmMain: TfrmMain
     Left = 32
     Top = 112
     Width = 49
-    Height = 24
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    Height = 21
     MaxLength = 3
     NumbersOnly = True
-    ParentFont = False
     PopupMenu = PopupMenu2
     TabOrder = 2
     Text = '0'
@@ -176,7 +154,7 @@ object frmMain: TfrmMain
   object TrackR: TTrackBar
     Left = 88
     Top = 48
-    Width = 329
+    Width = 337
     Height = 25
     LineSize = 5
     Max = 255
@@ -188,7 +166,7 @@ object frmMain: TfrmMain
   object TrackG: TTrackBar
     Left = 88
     Top = 80
-    Width = 329
+    Width = 337
     Height = 25
     LineSize = 5
     Max = 255
@@ -200,7 +178,7 @@ object frmMain: TfrmMain
   object TrackB: TTrackBar
     Left = 88
     Top = 112
-    Width = 330
+    Width = 337
     Height = 25
     LineSize = 5
     Max = 255
@@ -212,10 +190,10 @@ object frmMain: TfrmMain
   object cmdClipboard24: TButton
     Left = 317
     Top = 191
-    Width = 97
+    Width = 108
     Height = 33
     Caption = 'Copy to Clipboard'
-    TabOrder = 8
+    TabOrder = 9
     OnClick = cmdClipboard24Click
   end
   object txtHEX24: TEdit
@@ -233,7 +211,7 @@ object frmMain: TfrmMain
     Font.Style = [fsBold]
     ParentFont = False
     ReadOnly = True
-    TabOrder = 7
+    TabOrder = 8
     Text = '000000'
   end
   object ColorBox1: TColorBox
@@ -242,12 +220,6 @@ object frmMain: TfrmMain
     Width = 113
     Height = 22
     Style = [cbStandardColors, cbIncludeNone, cbIncludeDefault, cbPrettyNames]
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentFont = False
     TabOrder = 6
     OnChange = ColorBox1Change
   end
@@ -261,7 +233,7 @@ object frmMain: TfrmMain
     Color = clBlack
     ParentBackground = False
     PopupMenu = PopupMenu1
-    TabOrder = 11
+    TabOrder = 12
   end
   object txtHEX16: TEdit
     Left = 184
@@ -278,25 +250,25 @@ object frmMain: TfrmMain
     Font.Style = [fsBold]
     ParentFont = False
     ReadOnly = True
-    TabOrder = 9
+    TabOrder = 10
     Text = '0000'
   end
   object cmdClipboard16: TButton
     Left = 317
     Top = 248
-    Width = 97
+    Width = 108
     Height = 33
     Caption = 'Copy to Clipboard'
-    TabOrder = 10
+    TabOrder = 11
     OnClick = cmdClipboard16Click
   end
   object cmdColorPicker: TButton
     Left = 317
     Top = 143
-    Width = 97
+    Width = 108
     Height = 25
     Caption = 'Pick Color'
-    TabOrder = 12
+    TabOrder = 7
     OnMouseDown = cmdColorPickerMouseDown
   end
   object ColorDialog1: TColorDialog
