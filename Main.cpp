@@ -193,7 +193,8 @@ void __fastcall TfrmMain::FormMouseMove(TObject *Sender, TShiftState Shift, int 
 
 void __fastcall TfrmMain::FormCreate(TObject */*Sender*/)
 {
-    Screen->Cursors[crEyeDropper] = LoadCursor(HInstance, "EYEDROPPER");
+    Screen->Cursors[crEyeDropper] = (HCURSOR)LoadImage(HInstance, "EYEDROPPER",
+        IMAGE_CURSOR, 0, 0, LR_DEFAULTCOLOR);
 }
 //---------------------------------------------------------------------------
 
