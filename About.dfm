@@ -9,7 +9,6 @@ object AboutBox: TAboutBox
   ParentFont = True
   OldCreateOrder = True
   Position = poMainFormCenter
-  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel

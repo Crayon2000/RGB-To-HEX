@@ -61,7 +61,6 @@ __published:	// IDE-managed Components
     void __fastcall cmdColorPickerMouseDown(TObject *Sender, TMouseButton Button,
           TShiftState Shift, int X, int Y);
     void __fastcall FormMouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
-    void __fastcall FormCreate(TObject *Sender);
 private:	// User declarations
     int __fastcall RGB24To16(int, int, int);
 public:		// User declarations

@@ -44,7 +44,6 @@ object frmMain: TfrmMain
     0000000000000000000000000000000000000000000000000000000000000000
     000000000000004000008C400000DE400000FFE10000}
   OldCreateOrder = False
-  OnCreate = FormCreate
   OnMouseMove = FormMouseMove
   OnMouseUp = FormMouseUp
   PixelsPerInch = 96

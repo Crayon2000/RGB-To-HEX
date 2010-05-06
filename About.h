@@ -22,7 +22,6 @@ __published:
 	TLabel *Version;
 	TLabel *Copyright;
 	TButton *OKButton;
-    void __fastcall FormCreate(TObject *Sender);
 private:
 public:
 	virtual __fastcall TAboutBox(TComponent* AOwner);

@@ -19,6 +19,9 @@ __fastcall TfrmMain::TfrmMain(TComponent* Owner)
     const HMENU MySysMenu = GetSystemMenu(Handle, false);
     AppendMenu(MySysMenu, MF_SEPARATOR, 0, 0);
     AppendMenu(MySysMenu, MF_STRING | MF_ENABLED, 101, "About...");
+
+    Screen->Cursors[crEyeDropper] = (HCURSOR)LoadImage(HInstance, "EYEDROPPER",
+        IMAGE_CURSOR, 0, 0, LR_DEFAULTCOLOR);
 }
 //---------------------------------------------------------------------------
 
@@ -188,13 +191,6 @@ void __fastcall TfrmMain::FormMouseMove(TObject *Sender, TShiftState Shift, int 
             ReleaseDC(NULL, MonitorHDC);
         }
     }
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TfrmMain::FormCreate(TObject */*Sender*/)
-{
-    Screen->Cursors[crEyeDropper] = (HCURSOR)LoadImage(HInstance, "EYEDROPPER",
-        IMAGE_CURSOR, 0, 0, LR_DEFAULTCOLOR);
 }
 //---------------------------------------------------------------------------
 
