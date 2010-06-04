@@ -88,17 +88,14 @@ object frmMain: TfrmMain
     ParentFont = False
   end
   object lblTitre: TLabel
-    Left = 109
+    Left = 0
     Top = 0
-    Width = 193
-    Height = 39
+    Width = 433
+    Height = 13
+    Align = alTop
+    Alignment = taCenter
     Caption = 'RGB To HEX'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -32
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
+    ExplicitWidth = 57
   end
   object lblHighcolor: TLabel
     Left = 184

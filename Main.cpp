@@ -22,6 +22,9 @@ __fastcall TfrmMain::TfrmMain(TComponent* Owner)
 
     Screen->Cursors[crEyeDropper] = (HCURSOR)LoadImage(HInstance, "EYEDROPPER",
         IMAGE_CURSOR, 0, 0, LR_DEFAULTCOLOR);
+
+    lblTitre->Font->Size = 24;
+    lblTitre->Font->Style = TFontStyles() << fsBold;
 }
 //---------------------------------------------------------------------------
 

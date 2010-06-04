@@ -15,6 +15,8 @@ __fastcall TAboutBox::TAboutBox(TComponent* AOwner)
                                             IMAGE_ICON,
                                             48, 48,
                                             LR_DEFAULTSIZE);
+
+    ProductName->Font->Style = TFontStyles() << fsBold;
 }
 //---------------------------------------------------------------------
 

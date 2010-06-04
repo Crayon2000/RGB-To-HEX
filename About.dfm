@@ -30,15 +30,9 @@ object AboutBox: TAboutBox
     object ProductName: TLabel
       Left = 88
       Top = 16
-      Width = 64
+      Width = 57
       Height = 13
       Caption = 'RGB To HEX'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      ParentFont = False
       IsControl = True
     end
     object Version: TLabel
