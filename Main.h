@@ -46,6 +46,9 @@ __published:	// IDE-managed Components
     TLabel *lblTruecolor;
     TButton *cmdClipboard16;
     TButton *cmdColorPicker;
+    TLabel *lblRGBA;
+    TButton *cmdClipboard32;
+    TEdit *txtHEX32;
     void __fastcall TrackRChange(TObject *Sender);
     void __fastcall TrackGChange(TObject *Sender);
     void __fastcall TrackBChange(TObject *Sender);
@@ -61,6 +64,7 @@ __published:	// IDE-managed Components
     void __fastcall cmdColorPickerMouseDown(TObject *Sender, TMouseButton Button,
           TShiftState Shift, int X, int Y);
     void __fastcall FormMouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
+    void __fastcall cmdClipboard32Click(TObject *Sender);
 private:	// User declarations
     int __fastcall RGB24To16(int, int, int);
 public:		// User declarations

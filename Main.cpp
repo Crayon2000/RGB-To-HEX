@@ -28,28 +28,36 @@ __fastcall TfrmMain::TfrmMain(TComponent* Owner)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TfrmMain::TrackRChange(TObject */*Sender*/)
+void __fastcall TfrmMain::TrackRChange(TObject *Sender)
 {
     txtR->Text = TrackR->Position;
     TrackChange();
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TfrmMain::TrackGChange(TObject */*Sender*/)
+void __fastcall TfrmMain::TrackGChange(TObject *Sender)
 {
     txtG->Text = TrackG->Position;
     TrackChange();
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TfrmMain::TrackBChange(TObject */*Sender*/)
+void __fastcall TfrmMain::TrackBChange(TObject *Sender)
 {
     txtB->Text = TrackB->Position;
     TrackChange();
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TfrmMain::cmdClipboard24Click(TObject */*Sender*/)
+void __fastcall TfrmMain::cmdClipboard32Click(TObject *Sender)
+{
+    TClipboard *ClipBoard  = new TClipboard();
+    ClipBoard->SetTextBuf(txtHEX32->Text.w_str());
+    delete ClipBoard;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TfrmMain::cmdClipboard24Click(TObject *Sender)
 {
     TClipboard *ClipBoard  = new TClipboard();
     ClipBoard->SetTextBuf(txtHEX24->Text.w_str());
@@ -57,7 +65,7 @@ void __fastcall TfrmMain::cmdClipboard24Click(TObject */*Sender*/)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TfrmMain::cmdClipboard16Click(TObject */*Sender*/)
+void __fastcall TfrmMain::cmdClipboard16Click(TObject *Sender)
 {
     TClipboard *ClipBoard  = new TClipboard();
     ClipBoard->SetTextBuf(txtHEX16->Text.w_str());
@@ -65,7 +73,7 @@ void __fastcall TfrmMain::cmdClipboard16Click(TObject */*Sender*/)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TfrmMain::ColorBox1Change(TObject */*Sender*/)
+void __fastcall TfrmMain::ColorBox1Change(TObject *Sender)
 {
     ChangeColor(ColorBox1->Selected);
     txtR->Text = GetRValue(ColorBox1->Selected);
@@ -74,7 +82,7 @@ void __fastcall TfrmMain::ColorBox1Change(TObject */*Sender*/)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TfrmMain::txtRChange(TObject */*Sender*/)
+void __fastcall TfrmMain::txtRChange(TObject *Sender)
 {
     try
     {
@@ -87,7 +95,7 @@ void __fastcall TfrmMain::txtRChange(TObject */*Sender*/)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TfrmMain::txtGChange(TObject */*Sender*/)
+void __fastcall TfrmMain::txtGChange(TObject *Sender)
 {
     try
     {
@@ -100,7 +108,7 @@ void __fastcall TfrmMain::txtGChange(TObject */*Sender*/)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TfrmMain::txtBChange(TObject */*Sender*/)
+void __fastcall TfrmMain::txtBChange(TObject *Sender)
 {
     try
     {
@@ -113,7 +121,7 @@ void __fastcall TfrmMain::txtBChange(TObject */*Sender*/)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TfrmMain::BrowseColor1Click(TObject */*Sender*/)
+void __fastcall TfrmMain::BrowseColor1Click(TObject *Sender)
 {
     ColorDialog1->Color = RGBColor->Color;
     ColorDialog1->Execute();
@@ -134,6 +142,7 @@ void __fastcall TfrmMain::ChangeColor(TColor Color)
     txtHEX24->Text = IntToHex(R, 2) +
                      IntToHex(G, 2) +
                      IntToHex(B, 2);
+    txtHEX32->Text = txtHEX24->Text + "FF";
     txtHEX16->Text = IntToHex(RGB24To16(R, G, B), 4);
 }
 //---------------------------------------------------------------------------

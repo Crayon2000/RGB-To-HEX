@@ -4,8 +4,8 @@ object frmMain: TfrmMain
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'RGB To HEX'
-  ClientHeight = 289
-  ClientWidth = 433
+  ClientHeight = 348
+  ClientWidth = 460
   Color = clBtnFace
   ParentFont = True
   Icon.Data = {
@@ -90,7 +90,7 @@ object frmMain: TfrmMain
   object lblTitre: TLabel
     Left = 0
     Top = 0
-    Width = 433
+    Width = 460
     Height = 13
     Align = alTop
     Alignment = taCenter
@@ -99,17 +99,24 @@ object frmMain: TfrmMain
   end
   object lblHighcolor: TLabel
     Left = 184
-    Top = 230
+    Top = 289
     Width = 78
     Height = 13
     Caption = '16-bit highcolor:'
   end
   object lblTruecolor: TLabel
     Left = 186
-    Top = 172
+    Top = 231
     Width = 78
     Height = 13
     Caption = '24-bit truecolor:'
+  end
+  object lblRGBA: TLabel
+    Left = 188
+    Top = 173
+    Width = 62
+    Height = 13
+    Caption = '32-bit RGBA:'
   end
   object txtR: TEdit
     Left = 32
@@ -150,7 +157,7 @@ object frmMain: TfrmMain
   object TrackR: TTrackBar
     Left = 88
     Top = 48
-    Width = 337
+    Width = 364
     Height = 25
     LineSize = 5
     Max = 255
@@ -162,7 +169,7 @@ object frmMain: TfrmMain
   object TrackG: TTrackBar
     Left = 88
     Top = 80
-    Width = 337
+    Width = 364
     Height = 25
     LineSize = 5
     Max = 255
@@ -174,7 +181,7 @@ object frmMain: TfrmMain
   object TrackB: TTrackBar
     Left = 88
     Top = 112
-    Width = 337
+    Width = 364
     Height = 25
     LineSize = 5
     Max = 255
@@ -184,18 +191,102 @@ object frmMain: TfrmMain
     OnChange = TrackBChange
   end
   object cmdClipboard24: TButton
-    Left = 317
-    Top = 191
+    Left = 344
+    Top = 250
     Width = 108
     Height = 33
     Caption = 'Copy to Clipboard'
-    TabOrder = 9
+    TabOrder = 11
     OnClick = cmdClipboard24Click
   end
   object txtHEX24: TEdit
     Left = 184
-    Top = 191
-    Width = 113
+    Top = 250
+    Width = 151
+    Height = 33
+    AutoSize = False
+    CharCase = ecUpperCase
+    Color = clBtnFace
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -29
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 10
+    Text = '000000'
+  end
+  object ColorBox1: TColorBox
+    Left = 184
+    Top = 144
+    Width = 151
+    Height = 22
+    Style = [cbStandardColors, cbIncludeNone, cbIncludeDefault, cbPrettyNames]
+    TabOrder = 6
+    OnChange = ColorBox1Change
+  end
+  object RGBColor: TPanel
+    Left = 8
+    Top = 143
+    Width = 161
+    Height = 197
+    BevelInner = bvLowered
+    BevelOuter = bvNone
+    Color = clBlack
+    ParentBackground = False
+    PopupMenu = PopupMenu1
+    TabOrder = 14
+  end
+  object txtHEX16: TEdit
+    Left = 184
+    Top = 308
+    Width = 151
+    Height = 32
+    AutoSize = False
+    CharCase = ecUpperCase
+    Color = clBtnFace
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -29
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 12
+    Text = '0000'
+  end
+  object cmdClipboard16: TButton
+    Left = 344
+    Top = 307
+    Width = 108
+    Height = 33
+    Caption = 'Copy to Clipboard'
+    TabOrder = 13
+    OnClick = cmdClipboard16Click
+  end
+  object cmdColorPicker: TButton
+    Left = 344
+    Top = 143
+    Width = 108
+    Height = 25
+    Caption = 'Pick Color'
+    TabOrder = 7
+    OnMouseDown = cmdColorPickerMouseDown
+  end
+  object cmdClipboard32: TButton
+    Left = 344
+    Top = 192
+    Width = 108
+    Height = 33
+    Caption = 'Copy to Clipboard'
+    TabOrder = 9
+    OnClick = cmdClipboard32Click
+  end
+  object txtHEX32: TEdit
+    Left = 186
+    Top = 192
+    Width = 151
     Height = 33
     AutoSize = False
     CharCase = ecUpperCase
@@ -208,64 +299,7 @@ object frmMain: TfrmMain
     ParentFont = False
     ReadOnly = True
     TabOrder = 8
-    Text = '000000'
-  end
-  object ColorBox1: TColorBox
-    Left = 184
-    Top = 144
-    Width = 113
-    Height = 22
-    Style = [cbStandardColors, cbIncludeNone, cbIncludeDefault, cbPrettyNames]
-    TabOrder = 6
-    OnChange = ColorBox1Change
-  end
-  object RGBColor: TPanel
-    Left = 8
-    Top = 143
-    Width = 161
-    Height = 138
-    BevelInner = bvLowered
-    BevelOuter = bvNone
-    Color = clBlack
-    ParentBackground = False
-    PopupMenu = PopupMenu1
-    TabOrder = 12
-  end
-  object txtHEX16: TEdit
-    Left = 184
-    Top = 249
-    Width = 113
-    Height = 32
-    AutoSize = False
-    CharCase = ecUpperCase
-    Color = clBtnFace
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -29
-    Font.Name = 'Courier New'
-    Font.Style = [fsBold]
-    ParentFont = False
-    ReadOnly = True
-    TabOrder = 10
-    Text = '0000'
-  end
-  object cmdClipboard16: TButton
-    Left = 317
-    Top = 248
-    Width = 108
-    Height = 33
-    Caption = 'Copy to Clipboard'
-    TabOrder = 11
-    OnClick = cmdClipboard16Click
-  end
-  object cmdColorPicker: TButton
-    Left = 317
-    Top = 143
-    Width = 108
-    Height = 25
-    Caption = 'Pick Color'
-    TabOrder = 7
-    OnMouseDown = cmdColorPickerMouseDown
+    Text = '000000FF'
   end
   object ColorDialog1: TColorDialog
     Options = [cdFullOpen]
