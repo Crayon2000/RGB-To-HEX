@@ -161,7 +161,6 @@ int __fastcall TfrmMain::RGB24To16(int R, int G, int B)
 }
 //---------------------------------------------------------------------------
 
-
 void __fastcall TfrmMain::cmdColorPickerMouseDown(TObject *Sender, TMouseButton Button,
           TShiftState Shift, int X, int Y)
 {
