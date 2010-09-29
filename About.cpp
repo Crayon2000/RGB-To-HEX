@@ -10,8 +10,8 @@ TAboutBox *AboutBox;
 __fastcall TAboutBox::TAboutBox(TComponent* AOwner)
 	: TForm(AOwner)
 {
-    ProgramIcon->Picture->Icon->Handle = LoadImage(HInstance,
-                                            "MAINICON",
+    ProgramIcon->Picture->Icon->Handle = LoadImageW(HInstance,
+                                            L"MAINICON",
                                             IMAGE_ICON,
                                             48, 48,
                                             LR_DEFAULTSIZE);
