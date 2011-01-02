@@ -86,8 +86,8 @@
 				<DependentOn>Main.h</DependentOn>
 				<BuildOrder>2</BuildOrder>
 			</CppCompile>
-			<FormResources Include="About.dfm"/>
 			<FormResources Include="Main.dfm"/>
+			<FormResources Include="About.dfm"/>
 			<BuildConfiguration Include="Release Build">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
@@ -127,7 +127,7 @@
 						<VersionInfoKeys Name="FileDescription">RGB To HEX</VersionInfoKeys>
 						<VersionInfoKeys Name="FileVersion">1.3.0.0</VersionInfoKeys>
 						<VersionInfoKeys Name="InternalName">RGB To HEX</VersionInfoKeys>
-						<VersionInfoKeys Name="LegalCopyright">Copyright 2001-2010 Crayon Application</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright">Copyright 2001-2011 Crayon Application</VersionInfoKeys>
 						<VersionInfoKeys Name="LegalTrademarks">RGB To HEX</VersionInfoKeys>
 						<VersionInfoKeys Name="OriginalFilename">color.exe</VersionInfoKeys>
 						<VersionInfoKeys Name="ProductName">RGB To HEX</VersionInfoKeys>
@@ -216,10 +216,10 @@
 						<HistoryLists_hlBCC_Defines Name="Item0">_DEBUG;NO_STRICT</HistoryLists_hlBCC_Defines>
 					</HistoryLists_hlBCC_Defines>
 					<Excluded_Packages>
-						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k140.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
-						<Excluded_Packages Name="$(BDSBIN)\bcbofficexp140.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
-						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k140.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-						<Excluded_Packages Name="$(BDSBIN)\dclofficexp140.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k150.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcbofficexp150.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k150.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp150.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
 					</Excluded_Packages>
 					<HistoryLists_hlTASM_HashTableCapacity>
 						<HistoryLists_hlTASM_HashTableCapacity Name="Count">1</HistoryLists_hlTASM_HashTableCapacity>
