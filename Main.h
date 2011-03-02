@@ -13,11 +13,10 @@
 #include <Menus.hpp>
 #include <ActnList.hpp>
 #include <StdActns.hpp>
-#include <Clipbrd.hpp>
 //---------------------------------------------------------------------------
 class TfrmMain : public TForm
 {
-__published:	// IDE-managed Components
+__published:    // IDE-managed Components
     TEdit *txtR;
     TEdit *txtG;
     TEdit *txtB;
@@ -65,9 +64,9 @@ __published:	// IDE-managed Components
           TShiftState Shift, int X, int Y);
     void __fastcall FormMouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
     void __fastcall cmdClipboard32Click(TObject *Sender);
-private:	// User declarations
+private:    // User declarations
     int __fastcall RGB24To16(int, int, int);
-public:		// User declarations
+public:     // User declarations
     __fastcall TfrmMain(TComponent* Owner);
     void __fastcall ChangeColor(TColor);
     void __fastcall TrackChange();

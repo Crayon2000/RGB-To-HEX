@@ -5,6 +5,7 @@
 
 #include "Main.h"
 #include "About.h"
+#include <Clipbrd.hpp>
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -51,7 +52,7 @@ void __fastcall TfrmMain::TrackBChange(TObject *Sender)
 
 void __fastcall TfrmMain::cmdClipboard32Click(TObject *Sender)
 {
-    TClipboard *ClipBoard  = new TClipboard();
+    TClipboard *ClipBoard = new TClipboard();
     ClipBoard->SetTextBuf(txtHEX32->Text.w_str());
     delete ClipBoard;
 }
@@ -59,7 +60,7 @@ void __fastcall TfrmMain::cmdClipboard32Click(TObject *Sender)
 
 void __fastcall TfrmMain::cmdClipboard24Click(TObject *Sender)
 {
-    TClipboard *ClipBoard  = new TClipboard();
+    TClipboard *ClipBoard = new TClipboard();
     ClipBoard->SetTextBuf(txtHEX24->Text.w_str());
     delete ClipBoard;
 }
@@ -67,7 +68,7 @@ void __fastcall TfrmMain::cmdClipboard24Click(TObject *Sender)
 
 void __fastcall TfrmMain::cmdClipboard16Click(TObject *Sender)
 {
-    TClipboard *ClipBoard  = new TClipboard();
+    TClipboard *ClipBoard = new TClipboard();
     ClipBoard->SetTextBuf(txtHEX16->Text.w_str());
     delete ClipBoard;
 }
