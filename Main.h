@@ -16,6 +16,8 @@
 //---------------------------------------------------------------------------
 class TfrmMain : public TForm
 {
+    typedef TForm inherited;
+
 __published:    // IDE-managed Components
     TEdit *txtR;
     TEdit *txtG;
@@ -66,15 +68,12 @@ __published:    // IDE-managed Components
     void __fastcall cmdClipboard32Click(TObject *Sender);
 private:    // User declarations
     int __fastcall RGB24To16(int, int, int);
+protected:
+    void __fastcall WndProc(Messages::TMessage &Message);
 public:     // User declarations
     __fastcall TfrmMain(TComponent* Owner);
     void __fastcall ChangeColor(TColor);
     void __fastcall TrackChange();
-    void __fastcall MenuHandler(TMessage &Msg);
-
-    BEGIN_MESSAGE_MAP
-        MESSAGE_HANDLER(WM_SYSCOMMAND, TMessage, MenuHandler)
-    END_MESSAGE_MAP(TForm)
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TfrmMain *frmMain;

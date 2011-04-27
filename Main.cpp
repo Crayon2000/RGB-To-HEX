@@ -1,11 +1,10 @@
 //---------------------------------------------------------------------------
-
 #include <vcl.h>
+#include <Clipbrd.hpp>
 #pragma hdrstop
 
 #include "Main.h"
 #include "About.h"
-#include <Clipbrd.hpp>
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -206,12 +205,12 @@ void __fastcall TfrmMain::FormMouseMove(TObject *Sender, TShiftState Shift, int 
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TfrmMain::MenuHandler(TMessage &Msg)
+void __fastcall TfrmMain::WndProc(Messages::TMessage &Message)
 {
-    if(Msg.WParam == 101)
+    if(Message.Msg == WM_SYSCOMMAND && Message.WParam == 101)
     {
         AboutBox->ShowModal();
     }
-    TForm::Dispatch(&Msg);
+    inherited::WndProc(Message);
 }
 //---------------------------------------------------------------------------
