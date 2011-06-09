@@ -17,10 +17,10 @@ __fastcall TfrmMain::TfrmMain(TComponent* Owner)
         : TForm(Owner)
 {
     const HMENU MySysMenu = GetSystemMenu(Handle, false);
-    AppendMenu(MySysMenu, MF_SEPARATOR, 0, 0);
-    AppendMenu(MySysMenu, MF_STRING | MF_ENABLED, 101, "About...");
+    AppendMenuW(MySysMenu, MF_SEPARATOR, 0, 0);
+    AppendMenuW(MySysMenu, MF_STRING | MF_ENABLED, 101, L"About...");
 
-    Screen->Cursors[crEyeDropper] = (HCURSOR)LoadImage(HInstance, "EYEDROPPER",
+    Screen->Cursors[crEyeDropper] = (HCURSOR)LoadImageW(HInstance, L"EYEDROPPER",
         IMAGE_CURSOR, 0, 0, LR_DEFAULTCOLOR);
 
     lblTitre->Font->Size = 24;
@@ -124,11 +124,13 @@ void __fastcall TfrmMain::txtBChange(TObject *Sender)
 void __fastcall TfrmMain::BrowseColor1Click(TObject *Sender)
 {
     ColorDialog1->Color = RGBColor->Color;
-    ColorDialog1->Execute();
-    ChangeColor(ColorDialog1->Color);
-    txtR->Text = GetRValue(ColorDialog1->Color);
-    txtG->Text = GetGValue(ColorDialog1->Color);
-    txtB->Text = GetBValue(ColorDialog1->Color);
+    if(ColorDialog1->Execute())
+    {
+        ChangeColor(ColorDialog1->Color);
+        txtR->Text = GetRValue(ColorDialog1->Color);
+        txtG->Text = GetGValue(ColorDialog1->Color);
+        txtB->Text = GetBValue(ColorDialog1->Color);
+    }
 }
 //---------------------------------------------------------------------------
 
