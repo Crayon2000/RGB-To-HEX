@@ -10,6 +10,8 @@
 #pragma resource "*.dfm"
 TfrmMain *frmMain;
 
+#define ID_ABOUT    101
+
 static const TCursor crEyeDropper = 1;
 
 //---------------------------------------------------------------------------
@@ -18,7 +20,7 @@ __fastcall TfrmMain::TfrmMain(TComponent* Owner)
 {
     const HMENU MySysMenu = GetSystemMenu(Handle, false);
     AppendMenuW(MySysMenu, MF_SEPARATOR, 0, 0);
-    AppendMenuW(MySysMenu, MF_STRING | MF_ENABLED, 101, L"About...");
+    AppendMenuW(MySysMenu, MF_STRING | MF_ENABLED, ID_ABOUT, L"About...");
 
     Screen->Cursors[crEyeDropper] = (HCURSOR)LoadImageW(HInstance, L"EYEDROPPER",
         IMAGE_CURSOR, 0, 0, LR_DEFAULTCOLOR);
@@ -51,25 +53,19 @@ void __fastcall TfrmMain::TrackBChange(TObject *Sender)
 
 void __fastcall TfrmMain::cmdClipboard32Click(TObject *Sender)
 {
-    TClipboard *ClipBoard = new TClipboard();
-    ClipBoard->SetTextBuf(txtHEX32->Text.w_str());
-    delete ClipBoard;
+    Clipboard()->SetTextBuf(txtHEX32->Text.c_str());
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TfrmMain::cmdClipboard24Click(TObject *Sender)
 {
-    TClipboard *ClipBoard = new TClipboard();
-    ClipBoard->SetTextBuf(txtHEX24->Text.w_str());
-    delete ClipBoard;
+    Clipboard()->SetTextBuf(txtHEX24->Text.c_str());
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TfrmMain::cmdClipboard16Click(TObject *Sender)
 {
-    TClipboard *ClipBoard = new TClipboard();
-    ClipBoard->SetTextBuf(txtHEX16->Text.w_str());
-    delete ClipBoard;
+    Clipboard()->SetTextBuf(txtHEX16->Text.c_str());
 }
 //---------------------------------------------------------------------------
 
@@ -209,7 +205,7 @@ void __fastcall TfrmMain::FormMouseMove(TObject *Sender, TShiftState Shift, int 
 
 void __fastcall TfrmMain::WndProc(Messages::TMessage &Message)
 {
-    if(Message.Msg == WM_SYSCOMMAND && Message.WParam == 101)
+    if(Message.Msg == WM_SYSCOMMAND && Message.WParam == ID_ABOUT)
     {
         AboutBox->ShowModal();
     }
