@@ -4,7 +4,7 @@ set path=%path%;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727
 set path=%path%;D:\Programmes
 
 echo Compiling code...
-msbuild Color.cbproj /t:Build /p:"Config=Release Build" /nologo /v:q
+msbuild Color.cbproj /t:Build /p:"Config=Release" /nologo /v:q
 if errorlevel 1 goto error
 
 echo Compressing executable...

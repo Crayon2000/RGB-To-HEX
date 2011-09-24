@@ -3,7 +3,7 @@
 			<ProjectGuid>{3c79ba53-1633-469a-b43a-586415dcc9d5}</ProjectGuid>
 			<ProjectType>CppVCLApplication</ProjectType>
 			<MainSource>Color.cpp</MainSource>
-			<Config Condition="'$(Config)'==''">Debug Build</Config>
+			<Config Condition="'$(Config)'==''">Debug</Config>
 			<ProjectVersion>12.2</ProjectVersion>
 			<Base>True</Base>
 			<Platform>Win32</Platform>
@@ -13,12 +13,12 @@
 		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
 			<Base>true</Base>
 		</PropertyGroup>
-		<PropertyGroup Condition="'$(Config)'=='Debug Build' or '$(Cfg_1)'!=''">
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
 			<Cfg_1>true</Cfg_1>
 			<CfgParent>Base</CfgParent>
 			<Base>true</Base>
 		</PropertyGroup>
-		<PropertyGroup Condition="'$(Config)'=='Release Build' or '$(Cfg_2)'!=''">
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
 			<Cfg_2>true</Cfg_2>
 			<CfgParent>Base</CfgParent>
 			<Base>true</Base>
@@ -88,14 +88,14 @@
 			</CppCompile>
 			<FormResources Include="Main.dfm"/>
 			<FormResources Include="About.dfm"/>
-			<BuildConfiguration Include="Release Build">
+			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
 			</BuildConfiguration>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>
-			<BuildConfiguration Include="Debug Build">
+			<BuildConfiguration Include="Debug">
 				<Key>Cfg_1</Key>
 				<CfgParent>Base</CfgParent>
 			</BuildConfiguration>

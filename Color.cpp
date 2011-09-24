@@ -2,6 +2,7 @@
 #include <vcl.h>
 #pragma hdrstop
 #include <tchar.h>
+//---------------------------------------------------------------------------
 USEFORM("Main.cpp", frmMain);
 USEFORM("About.cpp", AboutBox);
 //---------------------------------------------------------------------------
@@ -10,6 +11,7 @@ WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
     try
     {
         Application->Initialize();
+        Application->MainFormOnTaskBar = true;
         if(CheckWin32Version(6))
         {   // At least Windows Vista
             Application->DefaultFont->Name = "Segoe UI";
@@ -23,6 +25,17 @@ WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
     catch (Exception &exception)
     {
         Application->ShowException(&exception);
+    }
+    catch (...)
+    {
+        try
+        {
+            throw Exception("");
+        }
+        catch (Exception &exception)
+        {
+            Application->ShowException(&exception);
+        }
     }
     return 0;
 }
