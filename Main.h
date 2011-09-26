@@ -2,16 +2,16 @@
 #ifndef MainH
 #define MainH
 //---------------------------------------------------------------------------
-#include <Classes.hpp>
-#include <Controls.hpp>
-#include <StdCtrls.hpp>
-#include <Forms.hpp>
-#include <ComCtrls.hpp>
-#include <ExtCtrls.hpp>
-#include <Dialogs.hpp>
-#include <Menus.hpp>
-#include <ActnList.hpp>
-#include <StdActns.hpp>
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Dialogs.hpp>
+#include <Vcl.Menus.hpp>
+#include <Vcl.ActnList.hpp>
+#include <Vcl.StdActns.hpp>
 //---------------------------------------------------------------------------
 class TfrmMain : public TForm
 {
