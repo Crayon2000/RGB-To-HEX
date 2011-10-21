@@ -12,7 +12,7 @@ TfrmMain *frmMain;
 
 #define ID_ABOUT    101
 
-static const TCursor crEyeDropper = 1;
+static const TCursor crEyeDropper = TCursor(1);
 
 //---------------------------------------------------------------------------
 __fastcall TfrmMain::TfrmMain(TComponent* Owner)
@@ -187,12 +187,12 @@ void __fastcall TfrmMain::FormMouseMove(TObject *Sender, TShiftState Shift, int 
         HDC MonitorHDC;
         if((MonitorHDC = GetDC(NULL)) != NULL)
         {
-            POINT MousePos;
+            TPoint MousePos;
             COLORREF color;
             if(GetCursorPos(&MousePos) &&
                (color = GetPixel(MonitorHDC, MousePos.x, MousePos.y)) != CLR_INVALID)
             {
-                ChangeColor((TColor)color);
+                ChangeColor(TColor(color));
                 txtR->Text = GetRValue(color);
                 txtG->Text = GetGValue(color);
                 txtB->Text = GetBValue(color);
