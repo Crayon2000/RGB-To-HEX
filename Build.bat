@@ -1,15 +1,15 @@
 @echo off
-set BDS=C:\Program Files\Embarcadero\RAD Studio\9.0
+set BDS=D:\Embarcadero\RAD Studio\10.0
 set path=%path%;C:\WINDOWS\Microsoft.NET\Framework\v3.5
 set path=%path%;D:\Programmes
 
-echo Compiling code...
-msbuild Color.cbproj /t:Build /p:"Config=Release" /nologo /v:q
+echo Compiling Win32 code...
+msbuild Color.cbproj /target:Build /property:"Config=Release";"Platform=Win32" /nologo /v:q
 if errorlevel 1 goto error
 
-echo Compressing executable...
-rem upx --best --force -qq .\Release\color.exe
-BCBStriper .\Release\color.exe
+echo Compressing Win32 executable...
+rem upx --best --force -qq .\Win32\Release\color.exe
+BCBStriper .\Win32\Release\color.exe
 if errorlevel 1 goto error
 
 echo Build successful.
