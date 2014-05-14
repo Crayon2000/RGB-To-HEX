@@ -12,6 +12,7 @@
 #include <Vcl.Menus.hpp>
 #include <Vcl.ActnList.hpp>
 #include <Vcl.StdActns.hpp>
+#include <System.Actions.hpp>
 //---------------------------------------------------------------------------
 class TfrmMain : public TForm
 {
