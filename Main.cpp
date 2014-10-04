@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 #include <vcl.h>
-#include <Clipbrd.hpp>
+#include <Vcl.Clipbrd.hpp>
 #pragma hdrstop
 
 #include "Main.h"
@@ -26,7 +26,7 @@ __fastcall TfrmMain::TfrmMain(TComponent* Owner)
         IMAGE_CURSOR, 0, 0, LR_DEFAULTCOLOR);
 
     lblTitre->Font->Size = 24;
-    lblTitre->Font->Style = TFontStyles() << fsBold;
+    lblTitre->Font->Style = TFontStyles() << TFontStyle::fsBold;
 }
 //---------------------------------------------------------------------------
 
@@ -188,14 +188,14 @@ void __fastcall TfrmMain::FormMouseMove(TObject *Sender, TShiftState Shift, int 
         if((MonitorHDC = GetDC(NULL)) != NULL)
         {
             TPoint MousePos;
-            COLORREF color;
+            COLORREF ColorRef;
             if(GetCursorPos(&MousePos) &&
-               (color = GetPixel(MonitorHDC, MousePos.x, MousePos.y)) != CLR_INVALID)
+               (ColorRef = GetPixel(MonitorHDC, MousePos.x, MousePos.y)) != CLR_INVALID)
             {
-                ChangeColor(TColor(color));
-                txtR->Text = GetRValue(color);
-                txtG->Text = GetGValue(color);
-                txtB->Text = GetBValue(color);
+                ChangeColor(TColor(ColorRef));
+                txtR->Text = GetRValue(ColorRef);
+                txtG->Text = GetGValue(ColorRef);
+                txtB->Text = GetBValue(ColorRef);
             }
             ReleaseDC(NULL, MonitorHDC);
         }
