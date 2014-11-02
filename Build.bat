@@ -1,5 +1,5 @@
 @echo off
-set BDS=C:\Program Files\Embarcadero\Studio\14.0
+set BDS=C:\Program Files\Embarcadero\Studio\15.0
 set path=%path%;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319
 set path=%path%;E:\Programmes
 

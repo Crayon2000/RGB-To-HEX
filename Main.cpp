@@ -132,9 +132,9 @@ void __fastcall TfrmMain::BrowseColor1Click(TObject *Sender)
 
 void __fastcall TfrmMain::ChangeColor(TColor Color)
 {
-    int R = GetRValue(Color),
-        G = GetGValue(Color),
-        B = GetBValue(Color);
+    const int R = GetRValue(Color);
+    const int G = GetGValue(Color);
+    const int B = GetBValue(Color);
 
     RGBColor->Color = Color;
     txtHEX24->Text = IntToHex(R, 2) +
