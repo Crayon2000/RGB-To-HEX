@@ -48,7 +48,7 @@ object AboutBox: TAboutBox
       Top = 80
       Width = 195
       Height = 13
-      Caption = 'Copyright 2001-2014 Crayon Application'
+      Caption = 'Copyright 2001-2015 Crayon Application'
       IsControl = True
     end
   end
