@@ -38,9 +38,9 @@ object AboutBox: TAboutBox
     object Version: TLabel
       Left = 88
       Top = 40
-      Width = 54
+      Width = 64
       Height = 13
-      Caption = 'Version 1.3'
+      Caption = 'Version 1.4.0'
       IsControl = True
     end
     object Copyright: TLabel
