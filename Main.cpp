@@ -182,7 +182,7 @@ void __fastcall TfrmMain::FormMouseUp(TObject *Sender, TMouseButton Button, TShi
 void __fastcall TfrmMain::FormMouseMove(TObject *Sender, TShiftState Shift, int X,
           int Y)
 {
-    if(!cmdColorPicker->Enabled)
+    if(cmdColorPicker->Enabled == false)
     {
         HDC MonitorHDC;
         if((MonitorHDC = GetDC(NULL)) != NULL)
@@ -212,3 +212,4 @@ void __fastcall TfrmMain::WndProc(Messages::TMessage &Message)
     inherited::WndProc(Message);
 }
 //---------------------------------------------------------------------------
+
