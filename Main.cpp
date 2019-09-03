@@ -119,14 +119,17 @@ void __fastcall TfrmMain::txtBChange(TObject *Sender)
 
 void __fastcall TfrmMain::BrowseColor1Click(TObject *Sender)
 {
-    ColorDialog1->Color = RGBColor->Color;
-    if(ColorDialog1->Execute())
+    TColorDialog* LColorDialog = new TColorDialog(NULL);
+    LColorDialog->Options << TColorDialogOption::cdFullOpen;
+    LColorDialog->Color = RGBColor->Color;
+    if(LColorDialog->Execute() == true)
     {
-        ChangeColor(ColorDialog1->Color);
-        txtR->Text = GetRValue(ColorDialog1->Color);
-        txtG->Text = GetGValue(ColorDialog1->Color);
-        txtB->Text = GetBValue(ColorDialog1->Color);
+        ChangeColor(LColorDialog->Color);
+        txtR->Text = GetRValue(LColorDialog->Color);
+        txtG->Text = GetGValue(LColorDialog->Color);
+        txtB->Text = GetBValue(LColorDialog->Color);
     }
+    delete LColorDialog;
 }
 //---------------------------------------------------------------------------
 
@@ -184,12 +187,12 @@ void __fastcall TfrmMain::FormMouseMove(TObject *Sender, TShiftState Shift, int 
 {
     if(cmdColorPicker->Enabled == false)
     {
-        HDC MonitorHDC;
-        if((MonitorHDC = GetDC(NULL)) != NULL)
+        HDC MonitorHDC = GetDC(NULL);
+        if(MonitorHDC != NULL)
         {
             TPoint MousePos;
             COLORREF ColorRef;
-            if(GetCursorPos(&MousePos) &&
+            if(GetCursorPos(&MousePos) == true &&
                (ColorRef = GetPixel(MonitorHDC, MousePos.x, MousePos.y)) != CLR_INVALID)
             {
                 ChangeColor(TColor(ColorRef));

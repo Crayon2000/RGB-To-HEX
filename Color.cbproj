@@ -65,7 +65,7 @@
         <IntermediateOutputDir>.\$(Platform)\$(Config)</IntermediateOutputDir>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
         <Icon_MainIcon>main.ico</Icon_MainIcon>
-        <VerInfo_Keys>CompanyName=Crayon Application;FileDescription=RGB To HEX;FileVersion=1.4.0.0;InternalName=RGB To HEX;LegalCopyright=Copyright 2001-2015 Crayon Application;LegalTrademarks=RGB To HEX;OriginalFilename=color.exe;ProductName=RGB To HEX;ProductVersion=1.4.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Crayon Application;FileDescription=RGB To HEX;FileVersion=1.4.0.0;InternalName=RGB To HEX;LegalCopyright=Copyright 2001-2019 Crayon Application;LegalTrademarks=RGB To HEX;OriginalFilename=color.exe;ProductName=RGB To HEX;ProductVersion=1.4.0;Comments=</VerInfo_Keys>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_MinorVer>4</VerInfo_MinorVer>
         <VerInfo_Locale>3084</VerInfo_Locale>

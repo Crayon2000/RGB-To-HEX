@@ -32,7 +32,6 @@ __published:    // IDE-managed Components
     TButton *cmdClipboard24;
     TEdit *txtHEX24;
     TColorBox *ColorBox1;
-    TColorDialog *ColorDialog1;
     TPopupMenu *PopupMenu1;
     TMenuItem *BrowseColor1;
     TPanel *RGBColor;

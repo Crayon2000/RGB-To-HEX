@@ -266,11 +266,6 @@ object frmMain: TfrmMain
     TabOrder = 8
     Text = '000000FF'
   end
-  object ColorDialog1: TColorDialog
-    Options = [cdFullOpen]
-    Left = 8
-    Top = 8
-  end
   object PopupMenu1: TPopupMenu
     Left = 48
     Top = 8
