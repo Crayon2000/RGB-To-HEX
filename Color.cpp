@@ -12,7 +12,7 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
     {
         Application->Initialize();
         Application->MainFormOnTaskBar = true;
-        if(CheckWin32Version(6))
+        if(CheckWin32Version(6) == true)
         {   // At least Windows Vista
             Application->DefaultFont->Name = "Segoe UI";
             Application->DefaultFont->Size = 9;

@@ -66,7 +66,7 @@ __published:    // IDE-managed Components
     void __fastcall FormMouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
     void __fastcall cmdClipboard32Click(TObject *Sender);
 private:    // User declarations
-    int __fastcall RGB24To16(int, int, int);
+    int __fastcall RGB24To16(int R, int G, int B);
 protected:
     void __fastcall WndProc(Messages::TMessage &Message);
 public:     // User declarations
