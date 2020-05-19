@@ -71,7 +71,7 @@ protected:
     void __fastcall WndProc(Messages::TMessage &Message);
 public:     // User declarations
     __fastcall TfrmMain(TComponent* Owner);
-    void __fastcall ChangeColor(TColor);
+    void __fastcall ChangeColor(TColor Color);
     void __fastcall TrackChange();
 };
 //---------------------------------------------------------------------------

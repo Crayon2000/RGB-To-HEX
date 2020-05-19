@@ -198,8 +198,6 @@ object frmMain: TfrmMain
     Height = 197
     BevelInner = bvLowered
     BevelOuter = bvNone
-    Color = clBlack
-    ParentBackground = False
     PopupMenu = PopupMenu1
     TabOrder = 14
   end

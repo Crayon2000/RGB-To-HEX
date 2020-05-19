@@ -27,6 +27,9 @@ __fastcall TfrmMain::TfrmMain(TComponent* Owner)
 
     lblTitre->Font->Size = 24;
     lblTitre->Font->Style = TFontStyles() << TFontStyle::fsBold;
+
+    RGBColor->StyleElements = TStyleElements() << seBorder;
+    RGBColor->Color = clBlack;
 }
 //---------------------------------------------------------------------------
 
