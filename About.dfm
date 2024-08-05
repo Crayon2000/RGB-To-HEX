@@ -7,10 +7,8 @@ object AboutBox: TAboutBox
   ClientWidth = 298
   Color = clBtnFace
   ParentFont = True
-  OldCreateOrder = True
   Position = poMainFormCenter
-  PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 15
   object Panel1: TPanel
     Left = 8
     Top = 8
@@ -30,25 +28,25 @@ object AboutBox: TAboutBox
     object ProductName: TLabel
       Left = 88
       Top = 16
-      Width = 57
-      Height = 13
+      Width = 62
+      Height = 15
       Caption = 'RGB To HEX'
       IsControl = True
     end
     object Version: TLabel
       Left = 88
       Top = 40
-      Width = 64
-      Height = 13
+      Width = 65
+      Height = 15
       Caption = 'Version 1.4.0'
       IsControl = True
     end
     object Copyright: TLabel
       Left = 8
       Top = 80
-      Width = 195
-      Height = 13
-      Caption = 'Copyright 2001-2023 Crayon Application'
+      Width = 214
+      Height = 15
+      Caption = 'Copyright 2001-2024 Crayon Application'
       IsControl = True
     end
   end
