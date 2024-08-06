@@ -1,5 +1,5 @@
 @echo off
-set BDS=C:\Program Files (x86)\Embarcadero\Studio\22.0
+set BDS=C:\Program Files (x86)\Embarcadero\Studio\23.0
 set path=%path%;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319
 
 echo Compiling Win32 code...
